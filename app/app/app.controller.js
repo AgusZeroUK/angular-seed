@@ -6,8 +6,7 @@
         .controller('AppController', AppController);
 
     function AppController() {
-        var vm = this;
-        vm.title = 'Welcome to Angular' ;
+        
     }
 
 })();
