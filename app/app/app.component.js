@@ -2,10 +2,18 @@
     'use strict';
 
     angular
-        .module('app', [])
+        .module('app', ['ngComponentRouter'])
+        .config(function($locationProvider){
+            $locationProvider.html5Mode(true);
+        })
+        .value('$routerRootComponent', 'myApp')
         .component('myApp', {
             templateUrl: 'app/app.tpl.html',
-            controller: 'AppController'
+            controller: 'AppController',
+            $routeConfig: [
+                {path: '/', name: 'CoursesList', component: 'coursesList', useAsDefault: true},
+                {path: '/details', name: 'CourseDetails', component: 'courseDetails'}
+            ]
         });
 
 })();

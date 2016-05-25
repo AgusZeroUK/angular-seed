@@ -14,6 +14,7 @@ angular
                 "name": "Course 1",
                 "description": "some descriptino",
                 "prerequisites": "Basic fluency with computers",
+                "price": "500",
                 "duration": 12,
                 "instructor": {
                     "_id": "57398224dcba0f089283b5e1",
@@ -26,6 +27,7 @@ angular
                 "name": "Course 2",
                 "description": "some descriptino",
                 "prerequisites": "Basic fluency with computers",
+                "price": "400",
                 "duration": 12,
                 "instructor": {
                     "_id": "57398224dcba0f089283b5e1",
