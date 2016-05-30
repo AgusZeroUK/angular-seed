@@ -5,10 +5,11 @@ module.exports = function(config){
 
     files : [
       'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-route/angular-route.js',
+      'https://npmcdn.com/@angular/router@0.2.0/angular1/angular_1_router.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+      'app/app/*.js',
+      'app/class-toggler/*.js',
+      'app/courses/*.js'
     ],
 
     autoWatch : true,
