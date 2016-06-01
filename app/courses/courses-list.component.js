@@ -6,35 +6,15 @@ angular
     })
     .controller('CoursesListController', coursesList);
 
-    function coursesList(){
+    function coursesList(coursesApi){
         var $ctrl = this;
         $ctrl.title = 'Courses list';
-        $ctrl.courses = [
-            {
-                "name": "Course 1",
-                "description": "some descriptino",
-                "prerequisites": "Basic fluency with computers",
-                "price": "500",
-                "duration": 12,
-                "instructor": {
-                    "_id": "57398224dcba0f089283b5e1",
-                    "name": "John",
-                    "surname": "Smith",
-                    "description": "Tutor description"
-                }
-            },
-            {
-                "name": "Course 2",
-                "description": "some descriptino",
-                "prerequisites": "Basic fluency with computers",
-                "price": "400",
-                "duration": 12,
-                "instructor": {
-                    "_id": "57398224dcba0f089283b5e1",
-                    "name": "John",
-                    "surname": "Smith",
-                    "description": "Tutor description"
-                }
-            }
-        ];
+        $ctrl.courses = [];
+
+        coursesApi.getCourses().then(assignCourses);
+
+        function assignCourses(res){
+            console.log(res);
+            $ctrl.courses = res.data;
+        }
     }
