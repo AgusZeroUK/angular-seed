@@ -12,7 +12,9 @@
             controller: 'AppController',
             $routeConfig: [
                 {path: '/', name: 'CoursesList', component: 'coursesList', useAsDefault: true},
-                {path: '/details/:id', name: 'CourseDetails', component: 'courseDetails'}
+                {path: '/details/:id', name: 'CourseDetails', component: 'courseDetails'},
+                {path: '/login', name: 'Login', component: 'login'},
+                {path: '/courses-admin', name: 'CoursesAdmin', component: 'courses'}
             ]
         });
 

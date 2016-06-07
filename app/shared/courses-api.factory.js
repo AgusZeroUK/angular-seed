@@ -9,7 +9,8 @@ function coursesApi($http){
 
     factory = {
         getCourses: getCourses,
-        getCourse: getCourse
+        getCourse: getCourse,
+        login: login
     };
 
     return factory;
@@ -22,5 +23,14 @@ function coursesApi($http){
 
     function getCourse(id){
         return $http.get(apiUrl + 'courses/' + id);
+    }
+
+    function login(email, password){
+        return $http.post(apiUrl + 'login',
+            {
+                email: email,
+                password: password
+            }
+        )
     }
 }
